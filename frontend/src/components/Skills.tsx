@@ -36,7 +36,7 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="skills" className="py-32 min-h-screen bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -76,34 +76,6 @@ export default function Skills() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Additional Skills */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
-            Additional Skills
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              "Agile Development",
-              "Code Review",
-              "Testing",
-              "Performance Optimization",
-              "UI/UX Design",
-              "Version Control",
-              "CI/CD",
-              "Microservices",
-              "Cloud Computing",
-              "DevOps"
-            ].map((skill, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-gray-900 px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-colors duration-200"
-              >
-                <span className="text-sm text-gray-700 dark:text-gray-300">{skill}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
