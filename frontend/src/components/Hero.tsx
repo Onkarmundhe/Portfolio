@@ -8,9 +8,18 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
-        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`transition-all duration-1000 -mt-16 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Profile Image */}
+          <div className="mb-8">
+            <img
+              src="/images/my_image.jpg"
+              alt="Onkar Mundhe"
+              className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full mx-auto object-cover object-center scale-75 border-4 border-white dark:border-gray-800 shadow-xl"
+            />
+          </div>
+          
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
             Hi, I'm{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
@@ -23,7 +32,7 @@ export default function Hero() {
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-            I build amazing web applications and digital experiences. Passionate about clean code, innovative solutions, and continuous learning.
+            Passionate about scalable systems, efficient deployments, and seamless user experiences
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

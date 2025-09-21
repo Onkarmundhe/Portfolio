@@ -1,6 +1,5 @@
 from typing import List
 from pydantic_settings import BaseSettings
-from pydantic import AnyHttpUrl
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "Portfolio API"
@@ -9,14 +8,9 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # CORS Configuration
-    BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [
-        "http://localhost:3000",  # Next.js frontend
-        "http://localhost:8000",  # FastAPI backend
-    ]
+    BACKEND_CORS_ORIGINS: List[str] = ["*"]
     
-    # Database Configuration
-    DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/portfolio"
-    
+
     # JWT Configuration
     SECRET_KEY: str = "your-secret-key-here"
     ALGORITHM: str = "HS256"
