@@ -8,12 +8,32 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Light theme variables */
+.light {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+  --card-bg: 255, 255, 255;
+  --card-border: 229, 231, 235;
+  --text-primary: 17, 24, 39;
+  --text-secondary: 75, 85, 99;
+  --text-muted: 107, 114, 128;
+  --accent-primary: 59, 130, 246;
+  --accent-secondary: 147, 51, 234;
+}
+
+/* Dark theme variables */
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+  --card-bg: 31, 41, 55;
+  --card-border: 75, 85, 99;
+  --text-primary: 249, 250, 251;
+  --text-secondary: 209, 213, 219;
+  --text-muted: 156, 163, 175;
+  --accent-primary: 96, 165, 250;
+  --accent-secondary: 168, 85, 247;
 }
 
 * {
@@ -36,6 +56,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -43,28 +64,40 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
+/* Custom scrollbar for light theme */
+.light ::-webkit-scrollbar {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #888;
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom scrollbar for dark theme */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
 
 /* Smooth scrolling */
@@ -99,4 +132,9 @@ html {
 
 .pulse {
   animation: pulse 2s infinite;
+}
+
+/* Theme transition for all elements */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }

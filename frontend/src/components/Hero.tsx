@@ -16,7 +16,7 @@ export default function Hero() {
             <img
               src="/images/my_image.jpg"
               alt="Onkar Mundhe"
-              className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full mx-auto object-cover object-center scale-75 border-4 border-white dark:border-gray-800 shadow-xl"
+              className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full mx-auto object-cover object-top border-4 border-white dark:border-gray-800 shadow-xl"
             />
           </div>
           
