@@ -1,37 +1,24 @@
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "TypeScript", level: 88 },
-        { name: "Tailwind CSS", level: 92 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML/CSS", level: 98 }
-      ]
+      title: "Programming Languages",
+      skills: ["Python", "C", "C++", "JavaScript", "HTML", "CSS"]
     },
     {
-      title: "Backend",
-      skills: [
-        { name: "Python", level: 90 },
-        { name: "FastAPI", level: 85 },
-        { name: "Node.js", level: 80 },
-        { name: "Express.js", level: 82 },
-        { name: "REST APIs", level: 88 },
-        { name: "GraphQL", level: 75 }
-      ]
+      title: "Web Development",
+      skills: ["NextJS", "FastAPI", "REST API", "Streamlit"]
     },
     {
-      title: "Database & Tools",
-      skills: [
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "Redis", level: 75 },
-        { name: "Docker", level: 82 },
-        { name: "Git", level: 95 },
-        { name: "AWS", level: 70 }
-      ]
+      title: "Databases",
+      skills: ["PostgreSQL", "SQLite", "Redis"]
+    },
+    {
+      title: "DevOps & Tools",
+      skills: ["Git", "AWS", "Jenkins", "Docker"]
+    },
+    {
+      title: "AI/ML & Automation",
+      skills: ["LangChain", "Agno", "Selenium", "Playwright"]
     }
   ]
 
@@ -44,34 +31,24 @@ export default function Skills() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are the technologies and tools I work with to bring ideas to life
+            The skills and technologies that shape my work
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            <div key={categoryIndex} className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center border-b border-gray-200 dark:border-gray-700 pb-3">
                 {category.title}
               </h3>
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <span
+                    key={skillIndex}
+                    className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 text-blue-800 dark:text-blue-200 hover:from-blue-200 hover:to-purple-200 dark:hover:from-blue-800 dark:hover:to-purple-800 transition-all duration-300 transform hover:scale-105 cursor-default"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>

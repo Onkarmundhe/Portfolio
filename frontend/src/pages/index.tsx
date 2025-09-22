@@ -12,42 +12,42 @@ export default function Home() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, and payment integration.",
-      image: "https://via.placeholder.com/600x400/4F46E5/FFFFFF?text=E-Commerce+Platform",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
-      githubUrl: "https://github.com/onkarmundhe/ecommerce-platform",
-      liveUrl: "https://ecommerce-demo.com",
+      title: "Typing Speed Test",
+      description: "A modern, responsive typing speed test application that measures typing speed (WPM), accuracy, and streak in real-time. Features adaptive cursor, theme support, and immediate visual feedback for typing mistakes.",
+      image: "/images/typing_speed_test.png",
+      technologies: ["JavaScript", "HTML", "CSS", "Google Fonts"],
+      githubUrl: "https://github.com/Onkarmundhe/typing-speed-test.git",
+      liveUrl: "",
       featured: true
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://via.placeholder.com/600x400/7C3AED/FFFFFF?text=Task+Management+App",
-      technologies: ["Next.js", "TypeScript", "Socket.io", "MongoDB", "Prisma"],
-      githubUrl: "https://github.com/onkarmundhe/task-manager",
-      liveUrl: "https://taskmanager-demo.com",
+      title: "GitHub Repository Analyzer",
+      description: "A Flask-based application that analyzes GitHub repositories using the Gemini 2.0 Flash AI model. Features repository data fetching, code structure analysis, language breakdown statistics, dependency identification, and AI-powered insights.",
+      image: "/images/github_analyzer.png",
+      technologies: ["Python", "Flask", "Gemini AI", "GitHub API", "RESTful API"],
+      githubUrl: "https://github.com/Onkarmundhe/Github_repo_analyzer",
+      liveUrl: "",
       featured: true
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard that displays current weather conditions and forecasts using data from multiple weather APIs.",
-      image: "https://via.placeholder.com/600x400/059669/FFFFFF?text=Weather+Dashboard",
-      technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
-      githubUrl: "https://github.com/onkarmundhe/weather-dashboard",
-      liveUrl: "https://weather-demo.com",
-      featured: false
+      title: "PDF Summary Generator",
+      description: "A Streamlit-based web application that generates concise summaries of PDF documents using AI models. Features easy PDF upload interface, text extraction, and both detailed and concise summary generation with a clean, intuitive user interface.",
+      image: "/images/pdf_summary_generator.png",
+      technologies: ["Python", "Streamlit", "Groq API", "Gemini AI", "PDF Processing"],
+      githubUrl: "https://github.com/Onkarmundhe/pdf-summary-generator.git",
+      liveUrl: "",
+      featured: true
     },
     {
       id: 4,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with Next.js and FastAPI, featuring dynamic content management and contact form integration.",
-      image: "https://via.placeholder.com/600x400/DC2626/FFFFFF?text=Portfolio+Website",
-      technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "Tailwind CSS"],
-      githubUrl: "https://github.com/onkarmundhe/portfolio",
-      liveUrl: "https://onkarmundhe.dev",
+      title: "Weakly-Hard Real-Time Task Scheduling",
+      description: "Implementation of different approaches for scheduling weakly-hard real-time tasks using various patterns and algorithms. Features Integer Linear Programming solution with Gurobi optimizer, E-pattern and R-pattern scheduling implementations with (m,k)-firm guarantees.",
+      image: "/images/realtime_scheduling.png",
+      technologies: ["Python", "Gurobi Optimizer", "Integer Linear Programming", "Real-Time Systems"],
+      githubUrl: "https://github.com/Onkarmundhe/Weakly-Hard-Real-Time-Scheduling",
+      liveUrl: "",
       featured: true
     }
   ]
