@@ -22,8 +22,11 @@ export default function Contact() {
     setIsSubmitting(true)
     setSubmitStatus('idle')
 
+    const startTime = performance.now()
+    console.log('📧 Starting email send process...')
+
     try {
-      const response = await fetch('http://localhost:8000/api/v1/contact/', {
+      const response = await fetch('http://localhost:8000/api/v1/contact/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,14 +34,21 @@ export default function Contact() {
         body: JSON.stringify(formData),
       })
 
+      const endTime = performance.now()
+      const duration = ((endTime - startTime) / 1000).toFixed(2)
+
       if (response.ok) {
+        console.log(`✅ Email sent successfully in ${duration} seconds`)
         setSubmitStatus('success')
         setFormData({ name: '', email: '', subject: '', message: '' })
       } else {
+        console.log(`❌ Email failed after ${duration} seconds`)
         setSubmitStatus('error')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      const endTime = performance.now()
+      const duration = ((endTime - startTime) / 1000).toFixed(2)
+      console.error(`❌ Error submitting form after ${duration} seconds:`, error)
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)

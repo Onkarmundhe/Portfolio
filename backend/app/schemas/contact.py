@@ -1,5 +1,4 @@
 from pydantic import BaseModel, EmailStr
-from typing import Optional
 
 class ContactForm(BaseModel):
     """Schema for contact form submission"""
@@ -7,7 +6,6 @@ class ContactForm(BaseModel):
     email: EmailStr
     subject: str
     message: str
-    phone: Optional[str] = None
     
     class Config:
         json_schema_extra = {
@@ -15,8 +13,7 @@ class ContactForm(BaseModel):
                 "name": "John Doe",
                 "email": "john.doe@example.com",
                 "subject": "Inquiry about your services",
-                "message": "Hello, I would like to know more about your work.",
-                "phone": "+1234567890"
+                "message": "Hello, I would like to know more about your work."
             }
         }
 

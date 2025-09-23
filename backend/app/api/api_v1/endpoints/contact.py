@@ -8,13 +8,28 @@ router = APIRouter()
 async def send_contact_form(contact: ContactForm):
     """Send contact form email"""
     try:
-        # Here you would typically implement email sending logic
-        # For now, we'll just return a success message
-        return {
-            "status": "success",
-            "message": "Thank you for your message. I will get back to you soon!"
-        }
+        # Send email using the contact form data
+        email_sent = await send_email(
+            to_email=contact.email,  # This parameter exists but we send to our own email
+            subject=contact.subject,
+            message=contact.message,
+            from_name=contact.name,
+            from_email=contact.email
+        )
+        
+        if email_sent:
+            return {
+                "status": "success",
+                "message": "Thank you for your message. I will get back to you soon!"
+            }
+        else:
+            raise HTTPException(
+                status_code=500,
+                detail="Failed to send email. Please try again later."
+            )
+            
     except Exception as e:
+        print(f"Error in contact form: {e}")
         raise HTTPException(
             status_code=500,
             detail="Failed to send message. Please try again later."

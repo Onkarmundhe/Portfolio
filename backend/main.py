@@ -1,13 +1,25 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
 from app.core.config import settings
 from app.api.api_v1.api import api_router
+from app.core.email import warm_smtp_connection
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup: Pre-warm SMTP connection
+    print("🚀 Starting Portfolio API...")
+    warm_smtp_connection()
+    yield
+    # Shutdown: Clean up if needed
+    print("👋 Shutting down Portfolio API...")
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.PROJECT_VERSION,
     description=settings.PROJECT_DESCRIPTION,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    openapi_url=f"{settings.API_V1_STR}/openapi.json",
+    lifespan=lifespan
 )
 
 # Set up CORS middleware

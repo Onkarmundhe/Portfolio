@@ -1,0 +1,96 @@
+{
+  "personal_info": {
+    "name": "Onkar Mundhe",
+    "title": "Software Development Engineer",
+    "location": "Pune, Maharashtra, India",
+    "email": "onkarmundhe995@gmail.com"
+  },
+  "professional_background": {
+    "description": "Passionate Software Development Engineer with expertise in full-stack development",
+    "passion": "Loves creating efficient, scalable, and user-friendly applications that solve real-world problems",
+    "learning_approach": "Always eager to learn new technologies and stay up-to-date with industry best practices",
+    "project_approach": "Enjoys working on challenging projects that push the boundaries of what's possible"
+  },
+  "technical_skills": {
+    "programming_languages": ["Python", "C", "C++", "JavaScript", "HTML", "CSS"],
+    "web_development": ["NextJS", "FastAPI", "REST API", "Streamlit"],
+    "databases": ["PostgreSQL", "SQLite", "Redis"],
+    "devops_tools": ["Git", "AWS", "Jenkins", "Docker"],
+    "ai_ml_automation": ["LangChain", "Agno", "Selenium", "Playwright"]
+  },
+  "interests": [
+    "Problem solving and creating innovative solutions",
+    "Team collaboration and knowledge sharing",
+    "Contributing to open-source projects",
+    "Exploring new technologies and frameworks",
+    "Continuous learning and professional development"
+  ],
+  "current_focus": [
+    "Building modern web applications",
+    "Full-stack development with modern tech stacks",
+    "Creating efficient and scalable solutions",
+    "Staying updated with latest industry trends"
+  ],
+  "work_experience": [
+    {
+      "id": 1,
+      "position": "Software Development Engineer",
+      "company": "Predusk Technology Private Limited, Jaipur, Rajsthan",
+      "duration": "Jul 2025 - Present",
+      "type": "Full-time",
+      "description": "Working as a Software Development Engineer focusing on AI/ML solutions, SaaS development, RAG systems, and multi-agent architectures.",
+      "current": true
+    },
+    {
+      "id": 2,
+      "position": "Business Analytics and Intelligence Intern",
+      "company": "Predusk Technology Private Limited",
+      "duration": "Dec 2024 - Jun 2025",
+      "type": "Internship",
+      "description": "Worked on business analytics and intelligence projects, gaining experience in data analysis and business intelligence solutions.",
+      "current": false
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Typing Speed Test",
+      "description": "A modern, responsive typing speed test application that measures typing speed (WPM), accuracy, and streak in real-time. Features adaptive cursor, theme support, and immediate visual feedback for typing mistakes.",
+      "technologies": ["JavaScript", "HTML", "CSS", "Google Fonts"],
+      "github_url": "https://github.com/Onkarmundhe/typing-speed-test.git",
+      "live_url": "",
+      "featured": true,
+      "category": "Web Application"
+    },
+    {
+      "id": 2,
+      "title": "GitHub Repository Analyzer",
+      "description": "A Flask-based application that analyzes GitHub repositories using the Gemini 2.0 Flash AI model. Features repository data fetching, code structure analysis, language breakdown statistics, dependency identification, and AI-powered insights.",
+      "technologies": ["Python", "Flask", "Gemini AI", "GitHub API", "RESTful API"],
+      "github_url": "https://github.com/Onkarmundhe/Github_repo_analyzer",
+      "live_url": "",
+      "featured": true,
+      "category": "AI Application"
+    },
+    {
+      "id": 3,
+      "title": "PDF Summary Generator",
+      "description": "A Streamlit-based web application that generates concise summaries of PDF documents using AI models. Features easy PDF upload interface, text extraction, and both detailed and concise summary generation with a clean, intuitive user interface.",
+      "technologies": ["Python", "Streamlit", "Groq API", "Gemini AI", "PDF Processing"],
+      "github_url": "https://github.com/Onkarmundhe/pdf-summary-generator.git",
+      "live_url": "",
+      "featured": true,
+      "category": "AI Application"
+    },
+    {
+      "id": 4,
+      "title": "Weakly-Hard Real-Time Task Scheduling",
+      "description": "Implementation of different approaches for scheduling weakly-hard real-time tasks using various patterns and algorithms. Features Integer Linear Programming solution with Gurobi optimizer, E-pattern and R-pattern scheduling implementations with (m,k)-firm guarantees.",
+      "technologies": ["Python", "Gurobi Optimizer", "Integer Linear Programming", "Real-Time Systems"],
+      "github_url": "https://github.com/Onkarmundhe/Weakly-Hard-Real-Time-Scheduling",
+      "live_url": "",
+      "featured": true,
+      "category": "Research Project"
+    }
+  ]
+}
