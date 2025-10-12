@@ -20,7 +20,7 @@ class ChatResponse(BaseModel):
 genai.configure(api_key=settings.GEMINI_API_KEY)
 
 # Initialize the model
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-2.5-flash')
 
 # Load Onkar's data from JSON file
 def load_onkar_data():
@@ -45,6 +45,14 @@ def get_relevant_data(message: str) -> str:
     Analyze the message and return relevant data sections
     """
     message_lower = message.lower()
+    
+    # Check if question is about education
+    education_keywords = ['education', 'study', 'studied', 'school', 'college', 'university', 'degree', 'graduate', 'graduation', 'academic', 'student', 'iit', 'btech', '10th', '12th', 'grade', 'class', 'board', 'percentage', 'cpi', 'gpa', 'marks']
+    if any(keyword in message_lower for keyword in education_keywords):
+        return json.dumps({
+            "education": ONKAR_DATA.get("education", []),
+            "personal_info": ONKAR_DATA["personal_info"]
+        }, indent=2)
     
     # Check if question is about work experience/career
     work_keywords = ['work', 'job', 'career', 'experience', 'employment', 'company', 'position', 'role', 'intern', 'internship', 'predusk', 'current job', 'working', 'worked']
@@ -147,5 +155,5 @@ async def health_check():
     return {
         "status": "healthy",
         "service": "AI Chatbot",
-        "model": "gemini-1.5-flash"
+        "model": "gemini-2.5-flash"
     }

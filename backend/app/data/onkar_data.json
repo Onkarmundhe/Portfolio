@@ -11,6 +11,34 @@
     "learning_approach": "Always eager to learn new technologies and stay up-to-date with industry best practices",
     "project_approach": "Enjoys working on challenging projects that push the boundaries of what's possible"
   },
+  "education": [
+    {
+      "id": 1,
+      "level": "10th Grade",
+      "medium": "Marathi Medium",
+      "percentage": 84.80,
+      "school_name": "Government Secondary School",
+      "board": "Maharashtra State Board",
+      "location": "Junnar, Pune, Maharashtra"
+    },
+    {
+      "id": 2,
+      "level": "12th Grade",
+      "stream": "Science Stream",
+      "percentage": 83.40,
+      "school_name": "Vagad Pace Global School",
+      "board": "CBSE",
+      "location": "Virar, Maharashtra"
+    },
+    {
+      "id": 3,
+      "level": "BTech",
+      "college_name": "IIT Goa",
+      "cpi": 6.28,
+      "branch": "Mathematics and Computing",
+      "location": "Ponda, Goa"
+    }
+  ],
   "technical_skills": {
     "programming_languages": ["Python", "C", "C++", "JavaScript", "HTML", "CSS"],
     "web_development": ["NextJS", "FastAPI", "REST API", "Streamlit"],
