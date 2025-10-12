@@ -64,7 +64,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto"></div>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Have an idea,vision or just something cool to build? Let’s talk!
+            Have an idea,vision or just something cool to build? Let&apos;s talk!
           </p>
         </div>
 
@@ -73,10 +73,10 @@ export default function Contact() {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm always interested in new ideas and exciting projects. 
+                I&apos;m always interested in new ideas and exciting projects. 
                 Whether you have a question or just want to say hi, feel free to reach out!
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function Contact() {
 
               {submitStatus === 'success' && (
                 <div className="bg-green-100 dark:bg-green-900/20 border border-green-400 dark:border-green-600 text-green-700 dark:text-green-300 px-4 py-3 rounded">
-                  Thank you for your message! I'll get back to you soon.
+                  Thank you for your message! I&apos;ll get back to you soon.
                 </div>
               )}
 
