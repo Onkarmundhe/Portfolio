@@ -49,7 +49,11 @@ export default function Chatbot() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Origin': window.location.origin,
+          'Access-Control-Request-Method': 'POST',
+          'Access-Control-Request-Headers': 'Content-Type'
         },
+        credentials: 'include',
         body: JSON.stringify({
           message: inputMessage,
           conversation_id: 'portfolio-chat'

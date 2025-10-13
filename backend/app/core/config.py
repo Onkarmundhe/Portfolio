@@ -8,7 +8,12 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # CORS Configuration
-    BACKEND_CORS_ORIGINS: List[str] = ["*"]
+    BACKEND_CORS_ORIGINS: List[str] = [
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "https://onkarmundhe.netlify.app",
+        "https://www.onkarmundhe.netlify.app"
+    ]
     
 
     # JWT Configuration
