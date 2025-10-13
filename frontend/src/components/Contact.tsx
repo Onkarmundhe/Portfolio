@@ -26,7 +26,8 @@ export default function Contact() {
     console.log('📧 Starting email send process...')
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/contact/send', {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL
+      const response = await fetch(`${apiUrl}/api/v1/contact/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
