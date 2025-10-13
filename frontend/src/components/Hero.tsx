@@ -14,7 +14,7 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="mb-8">
             <img
-              src="/images/my_image.jpg"
+              src="/images/my_image.JPG"
               alt="Onkar Mundhe"
               className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full mx-auto object-cover object-top border-4 border-white dark:border-gray-800 shadow-xl"
             />
