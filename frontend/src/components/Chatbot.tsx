@@ -44,16 +44,14 @@ export default function Chatbot() {
     setIsLoading(true)
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL
-      const response = await fetch(`${apiUrl}/api/v1/chatbot/chat`, {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || ''
+      // Remove trailing slash to avoid double slashes
+      const baseUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl
+      const response = await fetch(`${baseUrl}/api/v1/chatbot/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Origin': window.location.origin,
-          'Access-Control-Request-Method': 'POST',
-          'Access-Control-Request-Headers': 'Content-Type'
         },
-        credentials: 'include',
         body: JSON.stringify({
           message: inputMessage,
           conversation_id: 'portfolio-chat'

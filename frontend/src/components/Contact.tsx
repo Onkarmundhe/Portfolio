@@ -26,16 +26,14 @@ export default function Contact() {
     console.log('📧 Starting email send process...')
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL
-      const response = await fetch(`${apiUrl}/api/v1/contact/send`, {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || ''
+      // Remove trailing slash to avoid double slashes
+      const baseUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl
+      const response = await fetch(`${baseUrl}/api/v1/contact/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Origin': window.location.origin,
-          'Access-Control-Request-Method': 'POST',
-          'Access-Control-Request-Headers': 'Content-Type'
         },
-        credentials: 'include',
         body: JSON.stringify(formData),
       })
 
