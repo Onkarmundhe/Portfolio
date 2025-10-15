@@ -1,3 +1,4 @@
+import os
 from typing import List
 from pydantic_settings import BaseSettings
 
@@ -12,7 +13,6 @@ class Settings(BaseSettings):
         "http://localhost:3000",
         "http://localhost:3001",
         "https://onkarmundhe.netlify.app",
-        "https://www.onkarmundhe.netlify.app"
     ]
     
 
@@ -35,5 +35,7 @@ class Settings(BaseSettings):
     class Config:
         case_sensitive = True
         env_file = ".env"
+        env_file_encoding = "utf-8"
+        extra = "ignore"
 
 settings = Settings()
