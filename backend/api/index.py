@@ -1,8 +1,11 @@
 import sys
 import os
 
-# Add the parent directory to the Python path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Get the backend directory (parent of parent of this file)
+backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Add backend directory to Python path
+sys.path.insert(0, backend_dir)
 
 from main import app
 
