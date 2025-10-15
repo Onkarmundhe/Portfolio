@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 from app.core.config import settings
 from app.api.api_v1.api import api_router
 from app.core.email import warm_smtp_connection
+import re
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -22,9 +23,25 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Set up CORS middleware
+# Custom CORS origin validator
+def is_allowed_origin(origin: str) -> bool:
+    if origin in settings.BACKEND_CORS_ORIGINS:
+        return True
+    
+    # Allow all Vercel preview deployments
+    if re.match(r"https://.*\.vercel\.app$", origin):
+        return True
+    
+    # Allow all Netlify preview deployments
+    if re.match(r"https://.*\.netlify\.app$", origin):
+        return True
+    
+    return False
+
+# Set up CORS middleware with allow_origin_regex
 app.add_middleware(
     CORSMiddleware,
+    allow_origin_regex=r"https://.*\.(vercel|netlify)\.app$",
     allow_origins=settings.BACKEND_CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
