@@ -10,7 +10,14 @@ import re
 async def lifespan(app: FastAPI):
     # Startup: Pre-warm SMTP connection
     print("🚀 Starting Portfolio API...")
-    warm_smtp_connection()
+    try:
+        # Only warm SMTP if credentials are configured
+        if settings.SMTP_HOST and settings.SMTP_USERNAME:
+            warm_smtp_connection()
+        else:
+            print("⚠️  SMTP not configured, skipping warm-up")
+    except Exception as e:
+        print(f"⚠️  SMTP warm-up failed: {e}")
     yield
     # Shutdown: Clean up if needed
     print("👋 Shutting down Portfolio API...")
